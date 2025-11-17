@@ -333,8 +333,8 @@ def run_experiment(args):
     y_hat, y_true, mask = output['y_hat'].squeeze(-1), \
                           output['y'].squeeze(-1), \
                           output['mask'].squeeze(-1)
-    check_mae = numpy_metrics.masked_mae(y_hat, y_true, mask)
-    print(f'Test MAE: {check_mae:.2f}')
+    check_rmse = numpy_metrics.masked_rmse(y_hat, y_true, mask)
+    print(f'Test RMSE: {check_rmse:.4f}')
     return y_hat
 
 

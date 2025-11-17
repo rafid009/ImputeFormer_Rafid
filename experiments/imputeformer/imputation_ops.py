@@ -11,6 +11,8 @@ from tsl.utils.python_utils import ensure_list
 
 def sample_mask(shape, p=0.002, p_noise=0., max_seq=1, min_seq=1, rng=None,
                 verbose=True):
+    print(f"Shape: {shape}")
+    exit()
     if rng is None:
         rand = np.random.random
         randint = np.random.randint
